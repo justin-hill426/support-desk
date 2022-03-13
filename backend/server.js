@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 })
 
 //can use this to make a server
-app.use('/api/user', require('./routes/userRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
 
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`))

@@ -5,4 +5,9 @@ router.post('/', (req, res) => {
   res.send('Register Route')
 })
 
+//added a login route
+router.post('/login', (req, res) => {
+  res.send('Login Route')
+})
+
 module.exports = router
