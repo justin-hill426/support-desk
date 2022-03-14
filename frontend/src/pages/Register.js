@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { FaUser } from 'react-icons/fa'
-import {toast} from 'react/toastify'
+import { toast } from 'react-toastify'
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -23,6 +23,7 @@ const Register = () => {
   const onSubmit = (e) => {
     e.preventDefault()
 
+
     if(password !== password2) {
       toast.error('Passwords do not match')
     }
@@ -42,16 +43,16 @@ const Register = () => {
       <section className="form">
         <form onSubmit={onSubmit}>
           <div className="form-group">
-            <input name='name' type="text" id='name' value={name} onChange={onChange} placeholder="Enter your name" className="form-control" />
+            <input name='name' type="text" id='name' value={name} onChange={onChange} placeholder="Enter your name" className="form-control" required/>
           </div>
           <div className="form-group">
-            <input name='email' type="email" id='email' value={email} onChange={onChange} placeholder="Enter your email" className="form-control" />
+            <input name='email' type="email" id='email' value={email} onChange={onChange} placeholder="Enter your email" className="form-control" required/>
           </div>
           <div className="form-group">
-            <input name='password' type="password" id='password' value={password} onChange={onChange} placeholder="Enter your password" className="form-control" />
+            <input name='password' type="password" id='password' value={password} onChange={onChange} placeholder="Enter your password" className="form-control" required/>
           </div>
           <div className="form-group">
-            <input name='password2' type="password" id='password2' value={password2} onChange={onChange} placeholder="Confirm your password" className="form-control" />
+            <input name='password2' type="password" id='password2' value={password2} onChange={onChange} placeholder="Confirm your password" className="form-control" required/>
           </div>
           <div className="form-group">
             <button className="btn btn-block">
